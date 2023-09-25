@@ -1,7 +1,3 @@
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
-
 public class Order {
     //region Private Fields
 
@@ -14,7 +10,11 @@ public class Order {
 
     //region Constructors
 
-    public Order() {
+    public Order(String clientName, String product, int quantity, double price) {
+        this.clientName = clientName;
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     //endregion
@@ -39,24 +39,4 @@ public class Order {
 
     //endregion
 
-    //region Public Methods
-
-    public void inputFromConsole() {
-        clientName = prompt("Client name: ");
-        product = prompt("Product: ");
-        quantity = Integer.parseInt(prompt("Quantity: "));
-        price = Double.parseDouble(prompt("Price: "));
-    }
-
-    //endregion
-
-    //region Private Methods
-
-    private String prompt(String message) {
-        Scanner in = new Scanner(System.in);
-        System.out.print(message);
-        return in.nextLine();
-    }
-
-    //endregion
 }
