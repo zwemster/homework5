@@ -7,5 +7,6 @@ public class Main {
 
         Order order = inputHandler.inputFromConsole();
         OrderSaver.saveToJson(order);
+        OrderSaver.saveToXML(order);
     }
 }
