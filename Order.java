@@ -14,11 +14,7 @@ public class Order {
 
     //region Constructors
 
-    public Order(String clientName, String product, int quantity, double price) {
-        this.clientName = clientName;
-        this.product = product;
-        this.quantity = quantity;
-        this.price = price;
+    public Order() {
     }
 
     //endregion
